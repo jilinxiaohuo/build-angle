@@ -12,6 +12,7 @@ on:
 jobs:
   build:
     runs-on: windows-2022
+    permissions: write-all
     steps:
 
       - name: checkout
