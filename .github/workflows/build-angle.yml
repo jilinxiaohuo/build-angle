@@ -45,8 +45,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: |
-            angle-${{ steps.build.outputs.BUILD_DATE }}.zip
-            angle-${{ steps.build.outputs.BUILD_DATE }}.zip
+            ./angle/angle-${{ steps.build.outputs.BUILD_DATE }}.zip
           tag_name: ${{ inputs.tag || github.ref_name }}
           draft: true
           fail_on_unmatched_files: true
