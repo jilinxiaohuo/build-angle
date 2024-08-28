@@ -71,6 +71,7 @@ set DEPOT_TOOLS_WIN_TOOLCHAIN=0
 call gclient sync || exit /b 1
 call gn gen out/Release --args="angle_build_all=false is_debug=false angle_has_frame_capture=false angle_enable_gl=false angle_enable_d3d11=false angle_enable_d3d9=false angle_enable_null=false" || exit /b 1
 call git apply -p0 ..\angle.patch || exit /b 1
+%SZIP% a -mx=9 angle-src-%BUILD_DATE%.zip angle.src || exit /b 1
 call autoninja -C out/Release libEGL libGLESv2 libGLESv1_CM || exit /b 1
 popd
 
