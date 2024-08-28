@@ -88,6 +88,9 @@ copy /y "%ProgramFiles(x86)%\Windows Kits\10\Redist\D3D\x64\d3dcompiler_47.dll" 
 copy /y angle.src\out\Release\libEGL.dll       angle\bin        1>nul 2>nul
 copy /y angle.src\out\Release\libGLESv1_CM.dll angle\bin        1>nul 2>nul
 copy /y angle.src\out\Release\libGLESv2.dll    angle\bin        1>nul 2>nul
+copy /y angle.src\out\Release\libEGL.pdb       angle\bin        1>nul 2>nul
+copy /y angle.src\out\Release\libGLESv1_CM.pdb angle\bin        1>nul 2>nul
+copy /y angle.src\out\Release\libGLESv2.pdb    angle\bin        1>nul 2>nul
 
 copy /y angle.src\out\Release\libEGL.dll.lib       angle\lib    1>nul 2>nul
 copy /y angle.src\out\Release\libGLESv1_CM.dll.lib angle\lib    1>nul 2>nul
