@@ -26,17 +26,17 @@ jobs:
         shell: cmd
         run: call build.cmd
 
-      - name: release
-        id: release
-        if: steps.build.outputs.ANGLE_COMMIT != ''
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ steps.build.outputs.BUILD_DATE }}
-          release_name: ${{ steps.build.outputs.BUILD_DATE }}
-          body: |
-            [angle commit](https://github.com/google/angle/commit/${{ steps.build.outputs.ANGLE_COMMIT }})
+      #- name: release
+      #  id: release
+      #  if: steps.build.outputs.ANGLE_COMMIT != ''
+      #  uses: actions/create-release@v1
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #  with:
+      #    tag_name: ${{ steps.build.outputs.BUILD_DATE }}
+      #    release_name: ${{ steps.build.outputs.BUILD_DATE }}
+      #    body: |
+      #      [angle commit](https://github.com/google/angle/commit/${{ steps.build.outputs.ANGLE_COMMIT }})
 
       - name: upload
         id: upload
