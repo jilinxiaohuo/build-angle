@@ -114,6 +114,7 @@ if "%GITHUB_WORKFLOW%" neq "" (
   :dateok
   set BUILD_DATE=%LDATE:~0,4%-%LDATE:~4,2%-%LDATE:~6,2%
 
+  %SZIP% a -mx=9 angle-src-%BUILD_DATE%.zip angle.src || exit /b 1
   %SZIP% a -mx=9 angle-%BUILD_DATE%.zip angle || exit /b 1
 
   rem echo "ANGLE_COMMIT=%ANGLE_COMMIT%" >> $GITHUB_OUTPUT
